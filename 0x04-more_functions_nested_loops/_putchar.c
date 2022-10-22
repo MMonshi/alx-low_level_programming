@@ -1,35 +1,13 @@
-#include "main.h"
-
-#include <stdio.h>
-
-
+#include <unistd.h>
 
 /**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- *  * main - check the code.
- *
- *   *
- *
- *    * Return: Always 0.
- *
- *     */
-
-int main(void)
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
 {
-
-	    char c;
-
-
-
-	        c = 'A';
-
-		    printf("%c: %d\n", c, _isupper(c));
-
-		        c = 'a';
-
-			    printf("%c: %d\n", c, _isupper(c));
-
-			        return (0);
-
+		return (write(1, &c, 1));
 }
